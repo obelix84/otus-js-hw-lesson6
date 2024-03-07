@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const {user, task1, admin, task2} = require("./hw4-all");
+const {user, task1, task2} = require("./hw4-all");
 describe('homework 4 tests', () => {
     it('Task 1 ', () => {
         jest.spyOn(window,'prompt').mockReturnValueOnce(29)
@@ -12,7 +12,7 @@ describe('homework 4 tests', () => {
     });
 
     it('Task 2 ', () => {
-        task2();
-        expect(Object.assign(user, { role: 'admin'})).toMatchObject(admin);
+        let admin = task2(user);
+        expect(admin).toMatchObject(Object.assign(user, {role: "admin"}));
     });
 });

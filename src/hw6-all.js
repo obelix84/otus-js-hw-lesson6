@@ -8,7 +8,7 @@ function diff(a, b) {
 // Функция возвращает true, если строка состоит из одного слова и false,
 // если из нескольких.
 function isWord(str) {
-    if (typeof str == "string" && str.indexOf(" ") === -1) {
+    if (typeof str == "string" && str.split(" ").length === 1) {
         return true;
     }
     return false;

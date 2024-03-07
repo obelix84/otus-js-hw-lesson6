@@ -13,9 +13,9 @@
     <p>Second</p>
     <p>Third</p>
     </div>
-<form action="">
-    <p><textarea name="comment" cols="40" rows="3" id="new_text" onchange="makeButtonVisible();"></textarea></p>
-    <p><input type="submit" onclick="addParagraph(); return false;" disabled></p>
+<form action="" onsubmit="addParagraph(); return false;">
+    <textarea name="comment" cols="40" rows="3" id="new_text" onchange="makeButtonVisible();"></textarea><br>
+    <input type="submit" disabled>
 </form>
 </main>
 </body>

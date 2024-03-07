@@ -8,7 +8,6 @@ function addParagraph() {
         let nodes = document.querySelectorAll("#all_par > p");
         if (nodes.length > 5) node.removeChild(nodes[0]);
     }
-    return false;
 }
 
 function makeButtonVisible() {
