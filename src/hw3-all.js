@@ -19,15 +19,10 @@ function task2() {
     // среднее арифметическое всех нечётных чисел от 1 до N
 function task3() {
     let number = +prompt("Input Number:");
-    let counter = 0;
-    let med = 0;
-    for (let i = 1; i <= number; i++) {
-        if (i % 2 === 1) {
-            med += i;
-            counter++;
-        }
-    }
-    console.log(med / counter);
+    if(number % 2 === 1) number++;
+    let c = number/2;
+    let m = (1/2*number)**2;
+    console.log(m / c);
 }
 
 module.exports = { task1, task2, task3}
