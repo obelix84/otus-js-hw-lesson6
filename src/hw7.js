@@ -1,23 +1,23 @@
 function addParagraph() {
-    let newPar = document.querySelector("#new_text").value;
-    if(newPar != "") {
-        let p = document.createElement("p");
-        p.innerHTML = newPar;
-        let node = document.querySelector("#all_par");
-        node.append(p);
-        let nodes = document.querySelectorAll("#all_par > p");
-        if (nodes.length > 5) node.removeChild(nodes[0]);
-    }
+  const newPar = document.querySelector('#new_text').value;
+  if (newPar != '') {
+    const p = document.createElement('p');
+    p.innerHTML = newPar;
+    const node = document.querySelector('#all_par');
+    node.append(p);
+    const nodes = document.querySelectorAll('#all_par > p');
+    if (nodes.length > 5) node.removeChild(nodes[0]);
+  }
 }
 
 function makeButtonVisible() {
-    let newPar = document.querySelector("#new_text").value;
-    if (newPar != "") {
-        let inp = document.querySelector('input[type="submit"]');
-        inp.removeAttribute("disabled");
-    } else {
-        document.querySelector('input[type="submit"]').setAttribute("disabled", "");
-    }
+  const newPar = document.querySelector('#new_text').value;
+  if (newPar != '') {
+    const inp = document.querySelector('input[type="submit"]');
+    inp.removeAttribute('disabled');
+  } else {
+    document.querySelector('input[type="submit"]').setAttribute('disabled', '');
+  }
 }
 
-module.exports = {addParagraph, makeButtonVisible};
+module.exports = { addParagraph, makeButtonVisible };
