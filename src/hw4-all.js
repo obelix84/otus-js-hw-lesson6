@@ -11,9 +11,8 @@ function task1(obj) {
 
 // 2.Создать копию объекта user с именем admin.
 // Добавить новому объекту поле role со значением ‘admin’.
-let admin = {};
-function task2() {
-    Object.assign(admin, user, {role: "admin"});
+function task2(obj) {
+    Object.assign(obj, user, {role: "admin"});
 }
 
-module.exports = {user, task1, admin, task2};
+module.exports = {user, task1, task2};
