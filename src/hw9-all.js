@@ -2,10 +2,9 @@
 // Определить, является ли треугольник прямоугольным.
 
 function isRightTriangle(a, b, c) {
-    let arr = [];
-    arr.push(a, b, c);
-    arr.sort((a, b) => b - a);
-    return arr[0]*arr[0] === arr[1]**2 + arr[2]**2;
+    if (a>b && a>c)  return a*a === b**2 + c**2;
+    if (b>a && b>c) return b*b === a**2 + c**2
+    return c*c === a**2 + b**2;
 }
 
 // 2.Пользователь вводит число R. Написать программу,

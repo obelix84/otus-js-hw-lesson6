@@ -11,10 +11,7 @@ function getCurrentDay() {
 
 function getMinutesFromStartDay() {
     let date = new Date();
-    date.setSeconds(0, 0);
-    let morning = new Date();
-    morning.setHours(0,0,0,0);
-    return (date.getTime() - morning.getTime())/ 60000;
+    return (date.getHours()*60 + date.getMinutes());
 }
 
 module.exports = {getCurrentDay, getMinutesFromStartDay}
